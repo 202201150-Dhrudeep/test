@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ebeef0; /* Light background color */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px;
+            box-shadow: 0 0 15px rgba(97, 183, 82, 0.5);
+            background: linear-gradient(to bottom, #ffffff, #f0f8ff); /* Gradient background */
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 12px;
+            font-size: 18px;
+        }
+        th {
+            background: linear-gradient(to bottom, #66b7b8, #4eb2c1); /* Gradient for headers */
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Light gray for even rows */
+        }
+        tr.finished {
+            background-color: lightblue !important; /* Light blue for finished tasks */
+        }
+        .checkbox-cell {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function toggleFinished(checkbox) {
+            const row = checkbox.closest('tr');
+            if (checkbox.checked) {
+                row.classList.add('finished');
+            } else {
+                row.classList.remove('finished');
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Activity</th>
+            <th>Done</th>
+        </tr>
+        <tr>
+            <td>6:30-7:15 AM</td>
+            <td>Exercise</td>
+            <td class="checkbox-cell"><input type="checkbox" onclick="toggleFinished(this)"></td>
+        </tr>
+        <tr>
+            <td>7:15-9:00 AM</td>
+            <td>DSA</td>
+            <td class="checkbox-cell"><input type="checkbox" onclick="toggleFinished(this)"></td>
+        </tr>
+        <tr>
+            <td>10:00-12:30 PM</td>
+            <td>CP</td>
+            <td class="checkbox-cell"><input type="checkbox" onclick="toggleFinished(this)"></td>
+        </tr>
+        <tr>
+            <td>2:00-6:00 PM</td>
+            <td>CSS, OS, DSA</td>
+            <td class="checkbox-cell"><input type="checkbox" onclick="toggleFinished(this)"></td>
+        </tr>
+        <tr>
+            <td>7:00-8:30 PM</td>
+            <td>DSA</td>
+            <td class="checkbox-cell"><input type="checkbox" onclick="toggleFinished(this)"></td>
+        </tr>
+        <tr>
+            <td>9:30-11:30 PM</td>
+            <td>GAMAM</td>
+            <td class="checkbox-cell"><input type="checkbox" onclick="toggleFinished(this)"></td>
+        </tr>
+        <tr>
+            <td>11:30 PM-12:15 AM</td>
+            <td>Book</td>
+            <td class="checkbox-cell"><input type="checkbox" onclick="toggleFinished(this)"></td>
+        </tr>
+    </table>
+</body>
+</html>

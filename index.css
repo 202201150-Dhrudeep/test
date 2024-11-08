@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+    color:antiquewhite;
+    
+    
+}
+#a{
+    font-size: 25px;
+    color:grey;
+}
+a{
+    margin:100px;
+}
+
+
+#nav{
+    height:60px;
+    background-color: rgb(0, 0, 0);
+}
+button{
+    font-size: 15px;
+    color: white;
+    background-color: rgb(72, 89, 110);
+}
+input{
+    color:black;
+}
+
+.content{
+    height:100px;
+    width:100px;
+    border:2px solid black;
+    border-radius: 25px;
+    padding:20px;
+    display:inline-block
+}
+
+footer{
+    
+    background-color: black;
+    text-align:center;
+    
+}
+#content
+{
+    height:615px;
+
+}
